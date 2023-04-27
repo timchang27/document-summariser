@@ -47,7 +47,7 @@ class Summariser:
         return f'{self.summarise(question)}'
     
 if __name__ == '__main__':
-    pdf_path = "CZ4031_Project2_Group17.pdf"
+    pdf_path = "uploads/pdfs/Project 1.pdf"
     
     with open ("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
@@ -58,4 +58,4 @@ if __name__ == '__main__':
     s = Summariser(pdf_path, openai_api_key)
     #question = "what are the names of the authors of the article?"
     question = "what is the title of the article?"
-    print(s.__str__())
+    print(s.__str__(question=question))
